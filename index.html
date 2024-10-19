@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finzo Banking App</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">FINZO</a></li>
+          <li class="nav__item">
+            <a href="#login__form" class="nav__link login">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Login Form -->
+
+    <main>
+      <section class="section__login">
+        <form action="#" id="login__form" class="login__form">
+          <h2>Enter Login Details</h2>
+          <div class="login__input">
+            <label for="username">Username </label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="login__input">
+            <label for="password">Password </label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" id="login__btn" class="btn btn-login">
+            Login
+          </button>
+        </form>
+      </section>
+
+      <div class="dashboard hidden">
+        <!-- Welcome message -->
+        <section class="welcome-section">
+          <h1>Welcome Back, <span class="greetings"></span></h1>
+        </section>
+
+        <!-- Balance Section -->
+        <section class="balance-section">
+          <h2>Current Balance</h2>
+          <p class="balance-amount"></p>
+          <p class="balance-date"></p>
+        </section>
+
+        <!-- Actions Section -->
+        <section class="actions">
+          <!-- Transfer Money Section -->
+          <section class="action transfer-money">
+            <h3>Transfer Money</h3>
+            <form class="transfer__form">
+              <input
+                type="text"
+                placeholder="Transfer to"
+                id="transfer-to"
+                required
+              />
+              <input
+                type="number"
+                placeholder="Amount"
+                id="transfer-amount"
+                required
+              />
+              <button class="btn-action" id="transfer-btn">➔</button>
+            </form>
+          </section>
+
+          <!-- Request Loan Section -->
+          <section class="action request-loan">
+            <h3>Request Loan</h3>
+            <form class="loan__form">
+              <input type="number" placeholder="Amount" id="loan" required />
+              <button class="btn-action" id="loan-btn">➔</button>
+            </form>
+          </section>
+
+          <!-- Close Account Section -->
+          <section class="action close-account">
+            <h3>Close Account</h3>
+            <form class="closeAcc__form">
+              <input
+                type="text"
+                placeholder="Confirm user"
+                id="user-input"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Confirm PIN"
+                id="user-pin"
+                required
+              />
+              <button class="btn-action" id="closeAcc-btn">Close</button>
+            </form>
+          </section>
+        </section>
+
+        <!-- Transaction History Section -->
+        <section class="transaction-history">
+          <h3>Transaction History</h3>
+          <ul class="transaction-list"></ul>
+        </section>
+      </div>
+      <!-- Success Modal -->
+      <div class="modal hidden" id="success-modal">
+        <div class="modal-content">
+          <p id="modal-message"></p>
+          <span class="close-btn" id="close-btn">&times;</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p><span style="color: #00a365;">Finzo Banking App ~ </span> Developed by &copy; Code Diva 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
