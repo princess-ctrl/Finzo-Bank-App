@@ -370,15 +370,10 @@ input[type='password'] {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .header {
     padding: 1.5rem;
   }
-
-  /* .section__login {
-    min-width: 50.7rem;
-    min-height: 120vh;
-  } */
 
   .login__form {
     width: 89%;
