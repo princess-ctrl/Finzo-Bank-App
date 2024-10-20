@@ -6,12 +6,12 @@
 
 html {
   font-size: 62.5%;
+  min-width: 49.7rem;
 }
 
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
-  overflow-x: hidden;
   line-height: 1;
   box-sizing: inherit;
 }
@@ -23,7 +23,6 @@ body {
 .header {
   background-color: #00a365;
   padding: 2rem;
-  width: 100%;
 }
 
 .nav__list {
@@ -44,7 +43,7 @@ body {
 
 .section__login {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(login.jpg);
+    url(./image/login.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -308,15 +307,15 @@ input[type='password'] {
 }
 
 .modal.show {
-  display: flex; 
+  display: flex;
 }
 
-
 .footer {
- padding: 1.5rem;
- text-align: center;
- font-size: 1.5rem;
- color: #333;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 300;
 }
 
 /* MEDIA QUERIES */
@@ -334,48 +333,52 @@ input[type='password'] {
     padding: 0 3rem;
   }
 
+  .nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .dashboard {
-    grid-template-columns: 1fr; 
-    padding: 0 8rem; 
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
   }
 
   .welcome-section,
   .balance-section,
   .action {
-    padding: 1rem; 
+    padding: 1rem;
   }
 
   .balance-section h2,
   .balance-amount {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   .btn {
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
   }
 
   input[type='text'],
   input[type='number'],
   input[type='password'] {
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
   }
 
   .modal {
-    width: 90%; 
-    height: auto; 
+    width: 90%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .header {
     padding: 1.5rem;
-    min-width: 49.7rem;
   }
 
-  .section__login {
-    min-width: 49.7rem;
+  /* .section__login {
+    min-width: 50.7rem;
     min-height: 120vh;
-  }
+  } */
 
   .login__form {
     width: 89%;
@@ -390,21 +393,18 @@ input[type='password'] {
     font-size: 1.4rem;
   }
 
-  .nav__list {
+  /* .nav__list {
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
 
   .btn {
     font-size: 1.2rem;
     padding: 1rem;
   }
 
-
   .dashboard {
-    grid-template-columns: 1fr;
-    padding: 0.5rem;
-    width: 100%;
+    padding: 0.8rem;
     gap: 1rem;
   }
 
@@ -421,6 +421,12 @@ input[type='password'] {
   }
 
   .action {
-    padding: 1rem; 
+    padding: 1rem;
+  }
+
+  .footer {
+    padding: .5rem;
+    margin-top: 4rem;
+    font-size: 1.3rem;
   }
 }
